@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Admin.ProductFragmentAdds">
+
+    <ImageView
+        android:id="@+id/iv_item_product_logo"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:src="@drawable/portada"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gl_productAdd_logo"
+        android:adjustViewBounds="true"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_productAdd_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60"
+        />
+
+    <EditText
+        android:id="@+id/productAdd_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Name"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        app:flow_horizontalBias="0.5"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_productAdd_logo"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/productAdd_category"
+        />
+
+    <EditText
+        android:id="@+id/productAdd_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Category"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        app:flow_horizontalBias="0.5"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productAdd_name"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/productAdd_price"
+        />
+
+    <EditText
+        android:id="@+id/productAdd_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Price"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        app:flow_horizontalBias="0.5"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent "
+        app:layout_constraintTop_toBottomOf="@+id/productAdd_category"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        app:layout_constraintBottom_toTopOf="@+id/productAdd_stock"
+        />
+
+    <EditText
+        android:id="@+id/productAdd_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Stock"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        app:flow_horizontalBias="0.5"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productAdd_price"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/productAdd_availability"
+        />
+
+    <EditText
+        android:id="@+id/productAdd_availability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Available"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        app:flow_horizontalBias="0.5"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productAdd_stock"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/gl_productAdd_btn"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_productAdd_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/productAdd_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Add Product"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gl_productAdd_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

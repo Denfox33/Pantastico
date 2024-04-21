@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_admin"
+    app:startDestination="@id/productFragmentAdds">
+
+
+    <fragment
+        android:id="@+id/productFragmentAdds"
+        android:name="com.example.myapplication1.Admin.ProductFragmentAdds"
+        android:label="fragment_product_adds"
+        tools:layout="@layout/fragment_product_adds" />
+    <fragment
+        android:id="@+id/productoFragmentEdit"
+        android:name="com.example.myapplication1.Admin.ProductoFragmentEdit"
+        android:label="fragment_producto_edit"
+        tools:layout="@layout/fragment_producto_edit" />
+    <fragment
+        android:id="@+id/productoFragment_Check_Edit"
+        android:name="com.example.myapplication1.Admin.ProductoFragment_Check_Edit"
+        android:label="fragment_producto__check__edit"
+        tools:layout="@layout/fragment_producto__check__edit" >
+        <action
+            android:id="@+id/action_productoFragment_Check_Edit_to_productoFragmentEdit"
+            app:destination="@id/productoFragmentEdit" />
+        <action
+            android:id="@+id/action_productoFragment_Check_Edit_to_productFragmentAdds"
+            app:destination="@id/productFragmentAdds" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventsFragmentCheckDeleteEdit"
+        android:name="com.myapplication1.Admin.EventsFragmentCheckDeleteEdit"
+        android:label="EventsFragmentCheckDeleteEdit" >
+        <action
+            android:id="@+id/action_eventsFragmentCheckDeleteEdit_to_eventsFragmentAdd"
+            app:destination="@id/eventsFragmentAdd" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventsFragmentAdd"
+        android:name="com.practicafinal2dam.Admin.EventsFragmentAdd"
+        android:label="EventsFragmentAdd" />
+
+
+</navigation>

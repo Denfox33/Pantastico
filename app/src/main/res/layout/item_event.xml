@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:layout_margin="14dp"
+    app:cardCornerRadius="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!--    //Para cada evento se especifica (como mínimo):-->
+    <!--    nombre, fecha, precio (pueden ser gratuitos), aforo-->
+    <!--    máximo y una imagen que será el icono del evento-->
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_row"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="#D3CFCF"
+        >
+
+        <ImageView
+            android:id="@+id/iv_item_event_logo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/baseline_error_24"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gl_item_event_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_item_event_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <LinearLayout
+            android:id="@+id/ll_item_event_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gl_item_event_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_item_event_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Name:"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/tv_item_event_name_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_weight="14"
+                android:inputType="text"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_event_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gl_item_event_logo"
+            app:layout_constraintTop_toBottomOf="@+id/ll_item_event_name"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_item_event_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Date:"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/tv_item_event_date_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_weight="14"
+                android:inputType="date"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_event_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gl_item_event_logo"
+            app:layout_constraintTop_toBottomOf="@+id/ll_item_event_date"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_item_event_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Price:"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/tv_item_event_price_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_weight="14"
+                android:inputType="numberDecimal"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_event_maxcapacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gl_item_event_logo"
+            app:layout_constraintTop_toBottomOf="@+id/ll_item_event_price"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_item_event_maxcapacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Max capacity:"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/tv_item_event_maxcapacity_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_weight="14"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_event_capacity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/gl_item_event_logo"
+            app:layout_constraintTop_toBottomOf="@+id/ll_item_event_maxcapacity"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_item_event_capacity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Capacity:"
+                android:textSize="15dp"
+                android:layout_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/tv_item_event_capacity_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_weight="14"
+                android:inputType="number"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_item_event_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/join"
+            android:background="#989595"
+            app:layout_constraintTop_toBottomOf="@+id/ll_item_event_capacity"
+            app:layout_constraintEnd_toStartOf="@+id/btn_item_event_cancel"
+            app:layout_constraintStart_toEndOf="@+id/gl_item_event_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="visible"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_item_event_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:background="#989595"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_item_event_join"
+            app:layout_constraintTop_toBottomOf="@+id/ll_item_event_capacity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:visibility="gone"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
